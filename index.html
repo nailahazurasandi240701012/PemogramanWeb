@@ -2,8 +2,9 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="vieWport" content="width+device-width, initial-scale=1.0">
-    <title> Lana Del Rey</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lana Del Rey</title>
+
     <style>
         body {
             margin: 0;
@@ -19,6 +20,7 @@
             margin: auto;
         }
 
+        /* JUDUL WEBSITE */
         .judul-tugas {
             text-align: center;
             font-size: 28px;
@@ -28,6 +30,7 @@
             color: #4b3832;
         }
 
+        /* TABEL UTAMA */
         .website {
             width: 100%;
             border-collapse: collapse;
@@ -38,12 +41,13 @@
             border: 1px solid #8c766c;
         }
 
+        /* HEADER FOTO */
         .header {
             height: 230px;
             padding: 0;
-            
             overflow: hidden;
         }
+
         .header img {
             width: 100%;
             height: 230px;
@@ -51,30 +55,34 @@
             display: block;
         }
 
+        /* MENU NAVIGASI UTAMA */
         .main-menu {
-           height: 50px;
+            height: 50px;
             text-align: center;
             background-color: #dfd0c6;
         }
 
         .main-menu a {
+            display: inline-block;
             text-decoration: none;
             color: #4b3832;
             font-weight: bold;
             font-size: 14px;
-            margin: 0 20px;
+            margin: 0 15px;
+            padding: 16px 0;
         }
 
         .main-menu a:hover {
             text-decoration: underline;
         }
 
+        /* SIDEBAR */
         .sidebar {
+            width: 23%;
             padding: 25px 20px;
             vertical-align: top;
             background-color: #e9ddd5;
             text-align: center;
-            background-color: #e9ddd5;
         }
 
         .sidebar ul {
@@ -95,6 +103,7 @@
             text-decoration: underline;
         }
 
+        /* ISI KONTEN */
         .isi-konten {
             width: 77%;
             padding: 30px;
@@ -116,29 +125,39 @@
         .isi-konten p {
             line-height: 1.7;
             text-align: justify;
-            
         }
 
         .isi-konten ul,
         .isi-konten ol {
             max-width: 700px;
+            line-height: 1.7;
         }
-    
+
+        /* TABEL INFORMASI */
         .informasi {
             width: 100%;
             border-collapse: collapse;
             margin-top: 15px;
         }
+
         .informasi th {
             background-color: #dfd0c6;
             padding: 10px;
             border: 1px solid #8c766c;
         }
-        .infromasi td {
+
+        .informasi td {
             padding: 10px;
-            border: 1px solid #8c766c;  
+            border: 1px solid #8c766c;
         }
 
+        /* TAUTAN DI DALAM KONTEN */
+        .isi-konten a {
+            color: #4b3832;
+            font-weight: bold;
+        }
+
+        /* FOOTER */
         .footer {
             height: 50px;
             text-align: center;
@@ -148,112 +167,223 @@
             font-style: italic;
         }
 
-        .isi-konten a {
-            color: #4b3832;
-            font-weight: bold;
+        /* TAMPILAN LAYAR KECIL */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .judul-tugas {
+                font-size: 20px;
+                letter-spacing: 2px;
+            }
+
+            .header,
+            .header img {
+                height: 160px;
+            }
+
+            .main-menu {
+                height: auto;
+                padding: 10px;
+            }
+
+            .main-menu a {
+                margin: 6px 8px;
+                padding: 6px 0;
+                font-size: 12px;
+            }
+
+            .sidebar,
+            .isi-konten {
+                display: block;
+                width: auto;
+                padding: 15px;
+            }
+
+            .sidebar ul {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 12px;
+            }
+
+            .sidebar li {
+                margin: 5px;
+            }
+
+            .informasi {
+                font-size: 13px;
+            }
         }
     </style>
 </head>
+
 <body>
 
-    <table class="website">
+    <div class="container">
 
-        <!-- JUDUL DALAM TABEL -->
-        <tr>
-            <td colspan="2" class="judul-tugas" style="padding: 15px 0;">
-                PROFILE LANA DEL REY
-            </td>
-        </tr>
-        <!-- HEADER FOTO -->
-         <tr>
-            <td colspan="2" class="header">
-             <img src="lana del.jpeg" alt="Lana Del Rey">
-            </td>
-         </tr>
-        <!-- SIDEBAR DAN ISI CONTENT -->
-        <tr>
+        <table class="website">
 
-            <!-- SIDEBAR -->
-            <td class="sidebar">
-            <h3>MENU</h3>
-            <ul>
-                <li><a href="#tentang">TENTANG</a></li>
-                <li><a href="#karya">KARYA</a></li>
-                <li><a href="#album">TOP 5 ALBUM</a></li>
-                <li><a href="#infromasi">INFORMASI</a></li>
-            </ul>
-    </td>
+            <!-- JUDUL WEBSITE -->
+            <tr>
+                <td colspan="2" class="judul-tugas">
+                    PROFILE LANA DEL REY
+                </td>
+            </tr>
 
-     <!-- ISI CONTENT -->
-      <td class="isi-konten">
-        
-        <h2 id="tentang">Tentang Lana Del Rey</h2>
-        
-        <p style="max-width:600px;">
-            Lana Del Rey merupakan salah satu penyanyi dan penulis lagu asal Amerika Serikat yang dikenal dengan gaya musik melankolis serta nuansa vintage Americana. Musiknya juga menjadi sumber inspirasi bagi banyak pendengar di seluruh dunia.
-        </p>
-        <p style="max-width:600px;">
-             Sejak memulai karier di dunia musik, Lana Del Rey dikenal lewat lirik-lirik yang puitis dan tema-tema seperti cinta, kerinduan, serta kehidupan glamor ala Amerika lama. Gaya bermusiknya yang khas membuatnya menjadi salah satu musisi paling berpengaruh dalam industri musik alternatif dan pop modern.
-        </p>
-        
-        <h3 id="karya"> Karya di Musik</h3>
-        <ul>
-            <li><strong>Penulisan Lagu</strong> - Lana Del Rey dikenal menulis sendiri sebagian besar liriknya, dengan gaya bahasa puitis yang sarat metafora dan nuansa emosional.</li>
-            <li><strong>Penampilan Live</strong> - Ia telah tampil di berbagai festival musik besar dunia, termasuk Coachella dan Glastonbury.</li>
-            <li><strong> Kolaborasi Musik</strong> - Berkolaborasi dengan sejumlah musisi ternama seperti The Weeknd, Taylor Swift, dan Jack Antonoff sebagai produser.</li>
-            <li><strong> Penghargaan & Pengakuan</strong> - Telah menerima beberapa nominasi Grammy Award atas kontribusinya di industri musik alternatif dan pop.</li>
-        </ul>
+            <!-- HEADER FOTO -->
+            <tr>
+                <td colspan="2" class="header">
+                    <img src="lana del.jpeg" alt="Lana Del Rey">
+                </td>
+            </tr>
 
-        <h3 id="album"> Top 5 Album Lana Del Rey</h3>
-        <ol>
-            <li>Born To Die</li>
-            <li>Ultraviolance</li>
-            <li>Norman Fu**ing Rockwell</li>
-            <li>Paradise</li>
-            <li>Did You Know There's a Tunnel Under Ocean Blvd</li>
-        </ol>
+            <!-- MENU NAVIGASI UTAMA -->
+            <tr>
+                <td colspan="2" class="main-menu">
+                    <a href="index.html">HOME</a>
+                    <a href="#tentang">PROFIL LANA DEL REY</a>
+                    <a href="gayacss.html">LATIHAN CSS</a>
+                    <a href="belajarform.html">BELAJAR FORM</a>
+                </td>
+            </tr>
 
-        <h3 id="infromasi"> Informasi Singkat</h3>
-        <table border="1" cellpadding="8" class="informasi">
+            <!-- SIDEBAR DAN ISI KONTEN -->
             <tr>
-                <th>Objek</th>
-                <th>Keterangan</th>
+
+                <!-- SIDEBAR -->
+                <td class="sidebar">
+                    <h3>MENU</h3>
+
+                    <ul>
+                        <li><a href="#tentang">TENTANG</a></li>
+                        <li><a href="#karya">KARYA</a></li>
+                        <li><a href="#album">TOP 5 ALBUM</a></li>
+                        <li><a href="#informasi">INFORMASI</a></li>
+                    </ul>
+                </td>
+
+                <!-- ISI KONTEN -->
+                <td class="isi-konten">
+
+                    <h2 id="tentang">Tentang Lana Del Rey</h2>
+
+                    <p>
+                        Lana Del Rey merupakan salah satu penyanyi dan
+                        penulis lagu asal Amerika Serikat yang dikenal
+                        dengan gaya musik melankolis serta nuansa vintage
+                        Americana. Musiknya juga menjadi sumber inspirasi
+                        bagi banyak pendengar di seluruh dunia.
+                    </p>
+
+                    <p>
+                        Sejak memulai karier di dunia musik, Lana Del Rey
+                        dikenal lewat lirik-lirik yang puitis dan tema-tema
+                        seperti cinta, kerinduan, serta kehidupan glamor
+                        ala Amerika lama. Gaya bermusiknya yang khas
+                        membuatnya menjadi salah satu musisi berpengaruh
+                        dalam industri musik alternatif dan pop modern.
+                    </p>
+
+                    <!-- KARYA -->
+                    <h3 id="karya">Karya di Musik</h3>
+
+                    <ul>
+                        <li>
+                            <strong>Penulisan Lagu</strong> -
+                            Lana Del Rey dikenal menulis sendiri sebagian
+                            besar liriknya, dengan gaya bahasa puitis yang
+                            sarat metafora dan nuansa emosional.
+                        </li>
+
+                        <li>
+                            <strong>Penampilan Live</strong> -
+                            Ia telah tampil di berbagai festival musik
+                            besar dunia, termasuk Coachella dan Glastonbury.
+                        </li>
+
+                        <li>
+                            <strong>Kolaborasi Musik</strong> -
+                            Berkolaborasi dengan sejumlah musisi ternama
+                            seperti The Weeknd, Taylor Swift, dan
+                            Jack Antonoff sebagai produser.
+                        </li>
+
+                        <li>
+                            <strong>Penghargaan dan Pengakuan</strong> -
+                            Telah menerima beberapa nominasi Grammy Award
+                            atas kontribusinya di industri musik.
+                        </li>
+                    </ul>
+
+                    <!-- TOP 5 ALBUM -->
+                    <h3 id="album">Top 5 Album Lana Del Rey</h3>
+
+                    <ol>
+                        <li>Born to Die</li>
+                        <li>Ultraviolence</li>
+                        <li>Norman Fucking Rockwell!</li>
+                        <li>Paradise</li>
+                        <li>Did You Know That There's a Tunnel Under Ocean Blvd</li>
+                    </ol>
+
+                    <!-- INFORMASI SINGKAT -->
+                    <h3 id="informasi">Informasi Singkat</h3>
+
+                    <table class="informasi">
+                        <tr>
+                            <th>Objek</th>
+                            <th>Keterangan</th>
+                        </tr>
+
+                        <tr>
+                            <td>Nama Asli</td>
+                            <td>Elizabeth Woolridge Grant</td>
+                        </tr>
+
+                        <tr>
+                            <td>Tempat, Tanggal Lahir</td>
+                            <td>New York City, 21 Juni 1985</td>
+                        </tr>
+
+                        <tr>
+                            <td>Genre Musik</td>
+                            <td>
+                                Indie pop, dream pop, baroque pop,
+                                dan musik alternatif
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Mulai Berkarier</td>
+                            <td>
+                                Sejak tahun 2000-an, dikenal luas lewat
+                                album Born to Die (2012)
+                            </td>
+                        </tr>
+                    </table>
+
+                    <br>
+
+                    <a href="https://www.google.com" target="_blank"
+                       rel="noopener noreferrer">
+                        Cari informasi tentang Lana Del Rey
+                    </a>
+
+                </td>
             </tr>
+
+            <!-- FOOTER -->
             <tr>
-                <td>Nama Asli</td>
-                <td>Elizabeth Woolridge Grant</td>
+                <td colspan="2" class="footer">
+                    Lana Del Rey
+                </td>
             </tr>
-            <tr>
-              <td>Tempat, Tanggal Lahir</td>
-              <td>New York City, 21 Juni 1985</td>  
-            </tr>
-            <tr>
-               <td>Genre Musik</td>
-               <td>Indie pop, dream pop, baroque pop, alternatif</td> 
-            </tr>
-            <tr>
-                <td>Mulai Berkarier</td>
-                <td>Sejak tahun 2008, dikenal luas lewat album Born To Die (2012)</td>
-            </tr>
+
         </table>
 
-        <br>
+    </div>
 
-        <a href="https://www.google.com">
-            Cari infromasi tentang Lana Del Rey
-        </a>
-
-    </td>
-
-</tr>
-
-<!-- FOOTER -->
-<tr>
-    <td colspan="2" class="footer">
-        Lana Del Rey
-    </td>
-</tr>
-</table>
-</div>
 </body>
 </html>
